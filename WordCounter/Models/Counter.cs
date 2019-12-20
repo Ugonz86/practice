@@ -7,10 +7,36 @@ namespace WordCounter.Models
         public string WordInput { get; set; }
         public string SentenceInput { get; set; }
 
+        private static Char[] _specialCharacters = { '.', ',', '!', '?', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+
         public RepeatCounter(string word, string sentence)
         {
             WordInput = word;
             SentenceInput = sentence;
+        }
+
+        public static bool ValidInput(string input)
+        {
+            bool output = true;
+            if (input.Length == 0)
+            {
+                output = false;
+            }
+            else if (input.Contains(' '))
+            {
+                output = false;
+            }
+            else
+            {
+                for (int i = 0; i < _specialCharacters.Length; i++)
+                {
+                    if (input.Contains(_specialCharacters[i]))
+                    {
+                        output = false;
+                    }
+                }
+            }
+            return output;
         }
 
         public int characterCount()
@@ -30,7 +56,8 @@ namespace WordCounter.Models
 
                 if (WordInput == wordArray[i])
                 {
-                    wordCount++;                }
+                    wordCount++;                
+                }
             }
             return wordCount;
         }
