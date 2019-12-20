@@ -13,5 +13,26 @@ namespace WordCounter.Models
             SentenceInput = sentence;
         }
 
+        public int characterCount()
+        {
+            int wordCount = 0;
+
+            string[] wordArray = SentenceInput.Split(' ');
+            for (int i = 0; i < wordArray.Length; i++)
+            {
+                foreach (char sentenceChar in _specialCharacters)
+                {
+                    if (wordArray[i].Contains(sentenceChar))
+                    {
+                        wordArray[i] = wordArray[i].Trim(_specialCharacters);
+                    }
+                }
+
+                if (WordInput == wordArray[i])
+                {
+                    wordCount++;                }
+            }
+            return wordCount;
+        }
     }
 }
