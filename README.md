@@ -34,7 +34,7 @@ A C# program with 2 initial inputs that gather both a word and a sentence from a
 * .NET
 
 ## Support and Contact Details
-Please contact _ugonzalez@gmail.com_ with questions or comments.
+Please contact _ugonzalez86@gmail.com_ with questions or comments.
 
 ### License
 MIT License
