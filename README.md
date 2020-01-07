@@ -40,4 +40,4 @@ Please contact _ugonzalez86@gmail.com_ with questions or comments.
 MIT License
 Copyright (c) 2019 **_Uriel Gonzalez_**
 
-![](WordCounter.Solution/DSC00815.jpeg)
+![](/DSC00815.jpeg)
